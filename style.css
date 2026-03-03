@@ -1,0 +1,224 @@
+/* =========================
+   1) Variables globales
+========================= */
+:root{
+    --bg: #095634;              /* Negro azulado profundo */
+    --card: #0b754b;            /* Azul oscuro elegante */
+    --accent: #0d0f14;          /* Azul principal */
+    --accent-soft: #060c0b;     /* Verde menta */
+    --text: #e2f1ff;            /* Blanco azulado */
+    --muted: #94a3b8;           /* Gris azulado */
+    --border: rgba(45,212,191,.18);
+    --radius: 18px;
+    --shadow: 0 10px 30px rgba(0,0,0,.55);
+    --transition: all .3s ease;
+}
+
+/* =========================
+   2) Reset básico
+========================= */
+*{ 
+  box-sizing: border-box; 
+  transition: var(--transition);
+}
+
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background:
+    radial-gradient(800px 400px at 10% 0%, rgba(115, 10, 122, 0.25), transparent),
+    radial-gradient(600px 300px at 90% 0%, rgba(4, 238, 206, 0.2), transparent),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =========================
+   3) Utilidades
+========================= */
+.container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.skip-link{
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: var(--accent-soft);
+  color: #041014;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.skip-link:focus{ left: 10px; }
+
+a{
+  color: var(--accent-soft);
+  text-decoration: none;
+}
+a:hover{
+  opacity: .85;
+}
+
+code{
+  background: rgba(45,212,191,.12);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* =========================
+   4) Header
+========================= */
+.site-header{
+  padding: 40px 0 20px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.site-header h1{
+  font-size: 2.3rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle{
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.nav{
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav a{
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(29,78,216,.08);
+}
+.nav a:hover{
+  background: var(--accent-soft);
+  color: #041014;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   5) Cards
+========================= */
+.card{
+  margin: 28px 0;
+  padding: 22px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.card:hover{
+  transform: translateY(-4px);
+}
+
+.grid{
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.mini{
+  padding: 14px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  background: rgba(45,212,191,.05);
+}
+
+/* =========================
+   6) Botones
+========================= */
+.btn{
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(45,212,191,.4);
+}
+
+.btn.ghost{
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+/* =========================
+   7) Tablas e imágenes
+========================= */
+img{
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+th, td{
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+thead{
+  background: rgba(45,212,191,.08);
+}
+
+/* =========================
+   8) Formularios
+========================= */
+input, select, textarea{
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(29,78,216,.06);
+  color: var(--text);
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  border-color: var(--accent-soft);
+  box-shadow: 0 0 0 2px rgba(45,212,191,.35);
+}
+
+.actions{
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* =========================
+   9) Footer
+========================= */
+.site-footer{
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+}
