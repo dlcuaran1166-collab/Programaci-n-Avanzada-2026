@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- Indica al navegador que este documento usa HTML5 -->
+
+<html lang="es">
+<!-- Elemento raíz del documento. lang="es" indica que el idioma es español -->
+
+<head>
+    <!-- Contiene información que NO se muestra en la página -->
+
+    <meta charset="UTF-8">
+    <!-- Permite usar caracteres especiales como ñ, tildes, etc. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el diseño sea adaptable en celulares -->
+
+    <title>HTML + CSS Showcase</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Conecta el archivo CSS externo -->
+</head>
+
+<body>
+    <!-- Todo lo visible en la página va dentro del body -->
+
+    <!-- Enlace de accesibilidad para saltar al contenido principal -->
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- ENCABEZADO PRINCIPAL DE LA PÁGINA -->
+    <header class="site-header">
+        <div class="container">
+
+            <!-- Título principal -->
+            <h1>HTML Showcase</h1>
+
+            <!-- Subtítulo -->
+            <p class="subtitle">
+                Un muestrario de etiquetas HTML + un CSS que no da pena 😌
+            </p>
+
+            <!-- Menú de navegación -->
+            <nav aria-label="Navegación principal">
+                <ul class="nav">
+                    <!-- Cada enlace dirige a una sección de la misma página -->
+                    <li><a href="#texto">Texto</a></li>
+                    <li><a href="#listas">Listas</a></li>
+                    <li><a href="#multimedia">Multimedia</a></li>
+                    <li><a href="#tablas">Tablas</a></li>
+                    <li><a href="#formularios">Formularios</a></li>
+                    <li><a href="#semantica">Semántica</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container" id="contenido">
+
+        <!-- SECCIÓN DE TEXTO -->
+        <section class="card" id="texto">
+            <h2>1. Texto y estructura</h2>
+
+            <article>
+                <h3>Encabezados y formato</h3>
+
+                <!-- Ejemplo de etiquetas de texto -->
+                <p>
+                    Esto es un párrafo con 
+                    <strong>negrita</strong>, 
+                    <em>cursiva</em>, 
+                    <mark>resaltado</mark>, 
+                    <u>subrayado</u> y 
+                    <code>código</code>.
+                </p>
+
+                <!-- Enlace externo -->
+                <p>
+                    Un enlace externo:
+                    <a href="https://developer.mozilla.org/es/" 
+                       target="_blank" 
+                       rel="noopener">
+                       MDN Web Docs
+                    </a>.
+                </p>
+
+                <!-- Cita -->
+                <blockquote cite="https://developer.mozilla.org/">
+                    “La web se construye mejor cuando el HTML tiene significado.”
+                </blockquote>
+
+                <!-- Texto pequeño -->
+                <p>
+                    <small>Esto es texto pequeño.</small>
+                </p>
+
+                <!-- Subíndice y superíndice -->
+                <p>
+                    Fórmula: H<sub>2</sub>O  
+                    Potencia: 2<sup>10</sup>
+                </p>
+
+                <!-- Línea divisoria -->
+                <hr>
+
+                <!-- Sección desplegable -->
+                <h3>Detalles expandibles</h3>
+                <details>
+                    <summary>Haz clic para ver un consejo</summary>
+                    <p>
+                        Usa etiquetas semánticas como 
+                        <code>&lt;header&gt;</code>, 
+                        <code>&lt;main&gt;</code>, 
+                        <code>&lt;section&gt;</code> 
+                        y <code>&lt;footer&gt;</code>.
+                    </p>
+                </details>
+
+                <!-- Texto preformateado -->
+                <h3>Bloque de código</h3>
+                <pre><code>
+function holaMundo() {
+    console.log("Hola, GitHub!");
+}
+                </code></pre>
+
+            </article>
+        <section class="card" id="listas">
+
+    <h2>2. Listas</h2>
+
+    <h3>Lista desordenada</h3>
+    <ul>
+        <li>Heather</li>
+        <li>Ejercicio</li>
+    </ul>
+
+    <h3>Lista ordenada</h3>
+    <ol>
+        <li>Primer paso</li>
+        <li>Segundo paso</li>
+    </ol>
+
+</section>
+
+         <section class="card" id="multimedia">
+            <h2>Multimedia</h2>
+            <img src="https://thumbs.dreamstime.com/b/lindo-acercamiento-de-perros-bajo-el-agua-entre-la-inteligencia-artificial-burbujas-ilustraci%C3%B3n-mar-oscuro-nadar-perro-272284713.jpg" 
+            alt="Ejemplo de imagen" 
+            loading="lazy">
+
+         </section>
+         
+         <section class="card" id="tablas">
+            <style>
+                table, th, td {
+                    border:1px double black;
+                    border-collapse: collapse;
+                    padding:10px;
+                }
+            </style>
+            <h2>4> </h2>
+            <table> 
+                <caption>Tabla de ejemplo</caption>
+                <thead>
+                    <tr>
+                        <th scope="col"> Comando</th>
+                        <th scope="col"> ¿Que hace?</th>
+                    </tr>
+                </thead>
+                 <td><code>git status</code></td>
+                    <td> Muestras de Cambios pendientes</td>
+                </tr>
+
+                <tr>
+                    <td><code>git add</code></td>
+                    <td> Agrega cambios</td>
+                </tr>
+
+                <tr>
+                    <td><code>git  commit</code></td>
+                    <td> Guarda version</td>
+                </tr>
+
+                <tr>
+                    <td><code>git  push</code></td>
+                    <td> Sube al repoditorio remoto</td>
+                </tr>
+          </tbody>           
+            
+        </table>
+         </section>
+         <section clas="card" id="formularios">
+            <h2>5> Formularion</h2>
+            <form action="#" method="post" class="form">
+               <fieldset>
+                 <legend> Datos Basicos</legend>
+                 <label for="">
+                    Nombre
+                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" requiered>
+                 </label>
+                 <label for="">
+                    Email
+                    <input type="email" name="email" placeholder="Ingresa tu email" requiered>
+                 </label>
+                 <label for="">
+                    Paswword
+                    <input type="paswword" name="pass" minlength="6">
+                 </label>
+                 <label for="">
+                    Fecha
+                    <input type="date" name="Fecha">
+                 </label>
+                 <label for="">
+                    Seleccion
+                    <select name="Opcion">
+                        <option value=""> Elige la opción</option>
+                        <option >HTmL</option>
+                        <option >css</option>
+                        <option >git</option>
+                    </select>
+                 </label>
+               </fieldset>
+            </form>
+         </section>
+
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 - Proyecto práctica funcionalidad y estiquetas HTML</p>
+        </div>
+    </footer>
+
+</body>
+</html>
